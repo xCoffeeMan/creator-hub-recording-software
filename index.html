@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/tailwind.css" />
+  <link href='https://css.gg/record.css' rel='stylesheet'>
+  <link rel="shortcut icon" type="image/png" href="assets/1.png">
+    <title>Creator Hub</title>
+    <style>
+      .scroll-left {
+       height: 50px;	
+       overflow: hidden;
+       position: relative;
+       background: gray-800;
+      }
+      .scroll-left p {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       line-height: 50px;
+       text-align: center;
+       /* Starting position */
+       transform:translateX(100%);
+       /* Apply animation to this element */
+       animation: scroll-left 10s linear infinite;
+      }
+      /* Move it (define the animation) */
+      @keyframes scroll-left {
+       0%   {
+       transform: translateX(100%); 		
+       }
+       100% {
+       transform: translateX(-100%); 
+       }
+      }
+      .gg-record {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px;
+    border: 6px solid transparent;
+    box-shadow: 0 0 0 2px,inset 0 0 0 10px;
+    border-radius: 100px
+}
+      </style>
+      
+
+      
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/1.png" alt="logo" width="30" height="20" class="d-inline-block align-text-top" >
+         <span style="color: rgb(255, 170, 0); margin:5px"><b> Creators-Hub</b></span>
+        </a>        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" style="color:crimson">Record</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:crimson">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php" style="color:crimson">Chat Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color:crimson">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:crimson">Calender</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="#" style="color:crimson;">Partners</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    
+      <main class="overflow-hidden">
+        <div class="container mx-auto py-8 px-4">
+          <video src="" autplay class="video-feedback w-50 bg-black h-auto mb-4 animate__animated animate__lightSpeedInRight" style=""></video>
+
+          <div class="video1">
+            </div>
+            <div class="flex flex-wrap -mx-4 mb-8 ">
+
+
+            </div>
+            <button class="start-recording mx-4 flex-1 bg-gradient-to-br p-4 uppercase text-black font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50" style="background-color:rgb(32, 143, 5);;">
+              Record Screen
+            </button>
+            <button class="stop-recording mx-4  flex-1 bg-gradient-to-br  p-4 uppercase text-lg font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50" disabled style="background-color:rgb(255, 8, 8);">
+              Stop Recording
+            </button>
+
+    
+          <div class="recorded-video-wrap hidden">
+            <h2 class="text-xl text-gray-500 uppercase font-light mb-4">
+              Recorded video
+            </h2>
+            <div class="flex flex-wrap -mx-4">
+              <a class="download-video text-center mx-4 flex-1 bg-gradient-to-br  p-4 uppercase text-lg font-bold transition-all duration-300 hover:opacity-90 disabled:opacity-50" disabled style="background-color:darksalmon;">
+                Download
+              </a>
+              <br></br>
+              <video src="" class="recorded-video w-10 bg-black h-auto mb-8" style=""></video>
+            
+            </div>
+
+          </div>
+        </div>
+      </main>
+ 
+
+
+   <button id="videoSelectBtn" class="button is-text">
+  
+
+   </button>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="renderer.js"></script>
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+    <script src="dist/main.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
